@@ -1,3 +1,4 @@
+
 plugins {
     // Apply the java plugin to add support for Java
     java
@@ -13,7 +14,9 @@ plugins {
      */
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("org.danilopianini.gradle-java-qa") version "1.36.0"
-}
+
+    id("org.danilopianini.unibo-oop-gradle-plugin") version "1.0.7-dev03-64cbefe"}
+
 
 repositories {
     mavenCentral()
@@ -70,3 +73,5 @@ application {
     // Define the main class for the application
     mainClass.set(main)
 }
+
+ java { toolchain { languageVersion.set(JavaLanguageVersion.of(17)) } }
